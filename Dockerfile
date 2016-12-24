@@ -1,4 +1,5 @@
 FROM httpd:2.4.23-alpine
+MAINTAINER Genadi Postrilko <genadipost@gmail.com>
 
 RUN apk add --update \
             py-pip \
