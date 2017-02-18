@@ -7,8 +7,9 @@ RUN apk add --update \
         && pip install mkdocs \
         && cd / \
         && git clone https://github.com/gluster/glusterdocs \
-        && cd /glusterdocs \
+        && cp /glusterdocs/mkdocs.yml /mkdocs.yml \
+        && sed 's/docs_dir: ./docs_dir: glusterdocs/g' -i /mkdocs.yml \
         && mkdocs build \
         && rm -rf /usr/local/apache2/htdocs \
-        && ln -s /glusterdocs/site /usr/local/apache2/htdocs
+        && ln -s /site /usr/local/apache2/htdocs
 
