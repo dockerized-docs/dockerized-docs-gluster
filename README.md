@@ -4,8 +4,8 @@
 Dockerzied GlusterFS documentation for offline use.
 
 # Image description #
-- Base image: `httpd:2.4.23-alpine`.
-- The most current glusterdocs `master` branch is cloned and built using MkDocs.
+- Base image: `httpd:2.4.23-alpine`
+- The most current glusterdocs `master` branch is cloned and built using MkDocs
 - GlusterFS documentation directory (`/glusterdocs/site`) is linked to httpd `DocumentRoot` (`/usr/local/apache2/htdocs`)  
 
 # How to use this image #
